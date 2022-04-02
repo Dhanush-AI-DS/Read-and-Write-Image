@@ -20,67 +20,74 @@ Use imwrite(filename, image) to write the image.
 End the program and close the output image windows.
 ## Program:
 ```python
-# Developed By:
-# Register Number
-# To Read,display the image
+# Developed By:DHANUSH S
+# Register Number : 212221230020
+i) #To Read,display the image
 
+# Color
+import cv2
+spd_mn=cv2.imread('rat.jpg',1)
+cv2.imshow('rat',spd_mn)
+cv2.waitKey(0)
+```
+```
+# Grayscale
 
+import cv2
+spd_mn=cv2.imread('rat.jpg',0)
+cv2.imshow('Grayscale',spd_mn)
+cv2.waitKey(0)
 
+```
+ii) #To write the image
+```
+import cv2
+spd_mn=cv2.imread('rat.jpg',1)
+cv2.imwrite('rat.jpg',spd_mn)
 
-# To write the image
+```
+iii) #Find the shape of the Image
+```
+import cv2
+spd_mn=cv2.imread('rat.jpg',1)
+print(spd_mn.shape)
 
-
-
-
-
-# Find the shape of the Image
-
-
-
-
-# To access rows and columns
-
-
-
-
-
-# To cut and paste portion of image
-
-
-
-
-
-
-
-
-
-
+```
+iv) #To access rows and columns
+```
+import cv2
+spd_mn=cv2.imread('rat.jpg',1)
+import random
+for i in range(200):
+    for j in range(spd_mn.shape[1]):
+        spd_mn[i][j] = [random.randint(0,100),random.randint(0,100),random.randint(0,100)]
+cv2.imshow('rat',spd_mn)
+cv2.waitKey(0)
+```
+v) #To cut and paste portion of image
+```
+import cv2
+spd_mn=cv2.imread('rat.jpg',1)
+img = spd_mn[300:400:,300:400]
+spd_mn[50:150,50:150] = img
+cv2.imshow('Cut Selection',spd_mn)
+cv2.waitKey(0)
 ```
 ## Output:
 
 ### i) Read and display the image
-
-<br>
-<br>
-
+<br>![gitlogo](smile-01.png)
+<br>![gitlogo](smile-02.png)
 ### ii)Write the image
-
-<br>
-<br>
+<br>![gitlogo](smile-03.png)
+<br>![gitlogo](smile-04.png)
 
 ### iii)Shape of the Image
-
-<br>
-<br>
-
+<br>![gitlogo](smile-05.png)
 ### iv)Access rows and columns
-<br>
-<br>
-
+<br>![gitlogo](smile.png)
 ### v)Cut and paste portion of image
-<br>
-<br>
-
+<br>![gitlogo](smile-06.png)
 ## Result:
 Thus the images are read, displayed, and written successfully using the python program.
 
